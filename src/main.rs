@@ -1,7 +1,7 @@
 use structopt::StructOpt;
 use std::path::PathBuf;
 use std::fs;
-use crate::problems::{day_one, day_two};
+use crate::problems::{day_one, day_two, day_three};
 
 mod problems;
 
@@ -27,6 +27,7 @@ fn main() {
     match args.day.as_ref() {
         "one" => println!("answer: {}", day_one::depth(func_input, args.part)),
         "two" => println!("answer: {}", day_two::dive(func_input, args.part)),
+        "three" => println!("answer: {}", day_three::fuel(func_input, args.part)),
         _ => panic!("could not understand request for args {} {}", args.day, args.part),
     }
 }
