@@ -3,7 +3,7 @@ use std::path::PathBuf;
 use std::fs;
 use crate::problems::{
     day_one, day_two, day_three, day_four, day_five,
-    day_six, day_seven,
+    day_six, day_seven, day_eight,
 };
 
 mod problems;
@@ -38,6 +38,7 @@ fn main() {
         "five" => println!("answer: {}", day_five::vents(func_input, args.part)),
         "six" => println!("answer: {}", day_six::lantern_fish(contents, args.part, args.extra)),
         "seven" => println!("answer: {}", day_seven::fuel(contents, args.part)),
+        "eight" => println!("answer: {}", day_eight::digits(contents, args.part)),
         _ => panic!("could not understand request for args {} {}", args.day, args.part),
     }
 }
