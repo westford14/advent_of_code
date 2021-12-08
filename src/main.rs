@@ -1,7 +1,10 @@
 use structopt::StructOpt;
 use std::path::PathBuf;
 use std::fs;
-use crate::problems::{day_one, day_two, day_three, day_four, day_five};
+use crate::problems::{
+    day_one, day_two, day_three, day_four, day_five,
+    day_six,
+};
 
 mod problems;
 
@@ -16,7 +19,10 @@ struct Cli {
     part: String,
 
     #[structopt(short = "f", long = "file")]
-    input: PathBuf
+    input: PathBuf,
+
+    #[structopt(short = "e", long = "extra", default_value = "18")]
+    extra: u16,
 }
 
 fn main() {
@@ -30,6 +36,7 @@ fn main() {
         "three" => println!("answer: {}", day_three::fuel(func_input, args.part)),
         "four" => println!("answer: {}", day_four::bingo(func_input, args.part)),
         "five" => println!("answer: {}", day_five::vents(func_input, args.part)),
+        "six" => println!("answer: {}", day_six::lantern_fish(contents, args.part, args.extra)),
         _ => panic!("could not understand request for args {} {}", args.day, args.part),
     }
 }
