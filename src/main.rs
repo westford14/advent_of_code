@@ -1,10 +1,7 @@
 use structopt::StructOpt;
 use std::path::PathBuf;
 use std::fs;
-use crate::problems::{
-    day_one, day_two, day_three, day_four, day_five,
-    day_six, day_seven, day_eight,
-};
+use crate::problems::*;
 
 mod problems;
 
@@ -39,6 +36,7 @@ fn main() {
         "six" => println!("answer: {}", day_six::lantern_fish(contents, args.part, args.extra)),
         "seven" => println!("answer: {}", day_seven::fuel(contents, args.part)),
         "eight" => println!("answer: {}", day_eight::digits(contents, args.part)),
+        "nine" => println!("answer: {}", day_nine::smoke(func_input, args.part)),
         _ => panic!("could not understand request for args {} {}", args.day, args.part),
     }
 }
