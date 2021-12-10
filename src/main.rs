@@ -35,6 +35,7 @@ fn main() {
         "2020" => {
             match args.day.as_ref() {
                 "one" => println!("answer: {}", year_2020::day_one::sum(func_input, args.part)),
+                "two" => println!("answer: {}", year_2020::day_two::flight(func_input, args.part)),
                 _ => panic!(
                     "could not understand request for args year: {}, day: {}, part: {}", args.year, args.day, args.part
                 )
