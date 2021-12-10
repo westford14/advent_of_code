@@ -1,4 +1,4 @@
-use crate::problems::utility;
+use crate::problems::year_2021::utility;
 
 pub fn fuel(args: Vec<String>, part: String) -> i32 {
     let input = utility::clean_array(args);

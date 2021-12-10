@@ -9,6 +9,7 @@ authors = [ "Alex Lee <westford14@gmail.com>" ]
 [dependencies]
 structopt = "0.3.13"
 counter = "0.5.2"
+itertools = "0.10.3"
 
 [profile.dev]
 opt-level = 0
